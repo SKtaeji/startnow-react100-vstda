@@ -1,5 +1,12 @@
+.cf::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 /* .App {
 } */
+
 
 .App-header {
   background-color: rgb(81, 82, 83);
@@ -17,3 +24,61 @@
 .App-intro {
   font-size: large;
 }
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+textarea {
+  width: 100%;
+  max-width: 100%;
+  min-height: 8em;
+  max-height: 16em;
+}
+
+strong + small {
+  display: block;
+}
+
+.update-todo{
+  display: flex;
+  justify-content: flex-end;
+}
+
+form {
+  flex: 1;
+ }
+
+.skimmy {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}  
+
+.form-group {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+input{
+  flex: 1;
+  margin: auto;
+}
+
+.ambition{
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* .edit-todo, .delete-todo{
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column-reverse;
+  align-self: flex-end;
+} */
