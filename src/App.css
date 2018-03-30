@@ -76,9 +76,3 @@ input{
   justify-content: space-between;
 }
 
-/* .edit-todo, .delete-todo{
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: column-reverse;
-  align-self: flex-end;
-} */
