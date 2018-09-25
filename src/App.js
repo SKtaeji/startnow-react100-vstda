@@ -16,7 +16,6 @@ class App extends Component {
     this.addTodo = this.addTodo.bind(this);
     this.handleSave = this.handleSave.bind(this);
     this.handleDeleteTodo = this.HandleDeleteTodo.bind(this);
-
   }
 
   changeNow = (event) => {
@@ -34,6 +33,7 @@ class App extends Component {
   handleSave = (todo, index) => {
     var todoList = [...this.state.todoList];
     todoList[index] = todo;
+    
     this.setState({ todoList })
   }
 
@@ -49,29 +49,18 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-
         <header className="App-header">
-
           <h1 className="App-title">Very Simple ToDo App</h1>
           <h6 className="App-subtitle">Never forget anything again.</h6>
           <hr />
-
         </header>
-
-          <div className="container" id="container">
-            
+          <div className="container" id="container">            
             <div className="row">
-
               <div name="createNewTodo" className="col-lg-4 col-md-4 col-sm-12">
-
                 <div className="card bg-light">
-
                   <div className="card-header">Create New ToDo</div>
-
                   <div className="card-body">
-
                     <form>
-
                       <div className="form-group">
                         <label className="card-title" htmlFor="todoList"><b>I want to...</b></label>
                         <textarea 
@@ -80,7 +69,6 @@ class App extends Component {
                         name="description"
                         onChange={this.changeNow} />
                       </div>
-
                       <div className="form-group">      
                         <label htmlFor="priorityFormControlSelect">What Priority is This?</label>
                         <select 
@@ -94,28 +82,19 @@ class App extends Component {
                           <option value="success">Low</option>
                         </select>
                       </div>
-
                     </form>
-
                   </div>
-
                   <div className="card-footer">
-                          <button 
-                          type="submit" 
-                          className="btn btn-success btn-block btn-lg create-todo"
-                          onClick={this.addTodo}>Save</button>
+                    <button 
+                    type="submit" 
+                    className="btn btn-success btn-block btn-lg create-todo"
+                    onClick={this.addTodo}>Save</button>
                   </div>                  
-
                 </div>
-
               </div>
-
               <div name="viewTodos" className="col-lg-8 col-md-8 col-sm-12">
-
                 <div className="card bg-light">
-
                   <div className="card-header">View My ToDos</div>
-
                   <div className="card-body">
                     {!this.state.todoList.length && 
                     <div>
@@ -135,16 +114,10 @@ class App extends Component {
                       );
                     })}
                   </div>
-
                 </div>
-
               </div>
-        
             </div>
-
           </div>
-        
-      
       </div>
     );
   }
